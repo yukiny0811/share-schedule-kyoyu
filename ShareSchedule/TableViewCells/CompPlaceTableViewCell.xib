@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="392" id="KGk-i7-Jjw" customClass="CompPlaceTableViewCell" customModule="AsobiShare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="392"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="392"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QN-fx-bhZ">
+                        <rect key="frame" x="10" y="10" width="300" height="372"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onn-Ft-p7C">
+                                <rect key="frame" x="10" y="10" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="4xz-Gt-yWd"/>
+                                    <constraint firstAttribute="height" constant="30" id="vNQ-Gs-ywf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DeA-FC-KaS">
+                                <rect key="frame" x="10" y="50" width="280" height="312"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="onn-Ft-p7C" secondAttribute="trailing" constant="10" id="4re-Ax-0hx"/>
+                            <constraint firstItem="DeA-FC-KaS" firstAttribute="top" secondItem="onn-Ft-p7C" secondAttribute="bottom" constant="10" id="80i-b3-PEm"/>
+                            <constraint firstItem="DeA-FC-KaS" firstAttribute="leading" secondItem="5QN-fx-bhZ" secondAttribute="leading" constant="10" id="I4T-p7-PM4"/>
+                            <constraint firstAttribute="trailing" secondItem="DeA-FC-KaS" secondAttribute="trailing" constant="10" id="RxR-aO-ePg"/>
+                            <constraint firstItem="onn-Ft-p7C" firstAttribute="top" secondItem="5QN-fx-bhZ" secondAttribute="top" constant="10" id="VX7-gs-EjR"/>
+                            <constraint firstAttribute="bottom" secondItem="DeA-FC-KaS" secondAttribute="bottom" constant="10" id="gM4-wF-y15"/>
+                            <constraint firstItem="onn-Ft-p7C" firstAttribute="leading" secondItem="5QN-fx-bhZ" secondAttribute="leading" constant="10" id="mxP-q6-nrZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5QN-fx-bhZ" secondAttribute="bottom" constant="10" id="1Kc-Ox-6RB"/>
+                    <constraint firstItem="5QN-fx-bhZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="31G-Oo-yZ8"/>
+                    <constraint firstAttribute="trailing" secondItem="5QN-fx-bhZ" secondAttribute="trailing" constant="10" id="UQg-U7-n8p"/>
+                    <constraint firstItem="5QN-fx-bhZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Yoa-RO-jWU"/>
+                    <constraint firstItem="5QN-fx-bhZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bct-M7-x6n"/>
+                    <constraint firstItem="5QN-fx-bhZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="jDs-K3-Fug"/>
+                    <constraint firstAttribute="trailing" secondItem="5QN-fx-bhZ" secondAttribute="trailing" constant="10" id="oMT-Sq-4Vl"/>
+                    <constraint firstAttribute="bottom" secondItem="5QN-fx-bhZ" secondAttribute="bottom" constant="10" id="uUd-ed-63r"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backView" destination="5QN-fx-bhZ" id="3Ri-Yd-5Re"/>
+                <outlet property="mapView" destination="DeA-FC-KaS" id="SiX-NC-uLt"/>
+                <outlet property="titleLabel" destination="onn-Ft-p7C" id="yMP-cB-fhx"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="249.10714285714283"/>
+        </tableViewCell>
+    </objects>
+</document>
